@@ -1,0 +1,359 @@
+<head>
+  <title>Trigonométrie</title>
+  <link rel="stylesheet" href="bulma.css">
+  <link rel="icon" type="image/png" href="icône.png" />
+  <script language="javascript">
+    function calculate() {
+      const angle = parseFloat(document.getElementById("angle").value);
+      const arrondir = document.getElementById("arrondir").value;
+      const degrestoradians = angle * Math.PI/180;
+      var sinus = Math.sin(degrestoradians);
+      var arsinus = sinus;
+      if (arrondir == "unite") {
+        arsinus = Math.round(sinus);
+      }
+      if (arrondir == "dixieme") {
+        arsinus *= 10;
+        arsinus = Math.round(sinus);
+        arsinus /= 10;
+      }
+      if (arrondir == "centieme") {
+        arsinus *= 100;
+        arsinus = Math.round(sinus);
+        arsinus /= 100;
+      }
+      if (arrondir == "millieme") {
+        arsinus *= 1000;
+        arsinus = Math.round(sinus);
+        arsinus /= 1000;
+      }
+      var cosinus = Math.cos(degrestoradians);
+      var arcosinus = cosinus;
+      if (arrondir == "unite") {
+        arcosinus = Math.round(cosinus);
+      }
+      if (arrondir == "dixieme") {
+        arcosinus *= 10;
+        arcosinus = Math.round(cosinus);
+        arcosinus /= 10;
+      }
+      if (arrondir == "centieme") {
+        arcosinus *= 100;
+        arcosinus = Math.round(cosinus);
+        arcosinus /= 100;
+      }
+      if (arrondir == "millieme") {
+        arcosinus *= 1000;
+        arcosinus = Math.round(cosinus);
+        arcosinus /= 1000;
+      }
+      var tangeante = Math.tan(degrestoradians);
+      var artangeante = tangeante;
+      if (arrondir == "unite") {
+        artangeante = Math.round(tangeante);
+      }
+      if (arrondir == "dixieme") {
+        artangeante *= 10;
+        artangeante = Math.round(tangeante);
+        artangeante /= 10;
+      }
+      if (arrondir == "centieme") {
+        artangeante *= 100;
+        artangeante = Math.round(tangeante);
+        artangeante /= 100;
+      }
+      if (arrondir == "millieme") {
+        artangeante *= 1000;
+        artangeante = Math.round(tangeante);
+        artangeante /= 1000;
+      }
+      var adjacent = parseFloat( document.getElementById("inadjacent").value);
+      var oppose = parseFloat(document.getElementById("inopposé").value);
+      var hypothenus = parseFloat(document.getElementById("inhypothenus").value);
+      if (adjacent != 0) {
+        var oppose = tangeante * adjacent;
+        var hypothenus = adjacent / cosinus;
+        if (arrondir == "unite") {
+          adjacent = Math.round(adjacent);
+          oppose = Math.round(oppose);
+          hypothenus = Math.round(hypothenus);
+        }
+        if (arrondir == "dixieme") {
+          adjacent *= 10;
+          adjacent = Math.round(adjacent);
+          adjacent /= 10;
+          oppose *= 10;
+          oppose = Math.round(oppose);
+          oppose /= 10;
+          hypothenus *= 10;
+          hypothenus = Math.round(hypothenus);
+          hypothenus /= 10;
+        }
+        if (arrondir == "centieme") {
+          adjacent *= 100;
+          adjacent = Math.round(adjacent);
+          adjacent /= 100;
+          oppose *= 100;
+          oppose = Math.round(oppose);
+          oppose /= 100;
+          hypothenus *= 100;
+          hypothenus = Math.round(hypothenus);
+          hypothenus /= 100;
+        }
+        if (arrondir == "millieme") {
+          adjacent *= 1000;
+          adjacent = Math.round(adjacent);
+          adjacent /= 1000;
+          oppose *= 1000;
+          oppose = Math.round(oppose);
+          oppose /= 1000;
+          hypothenus *= 1000;
+          hypothenus = Math.round(hypothenus);
+          hypothenus /= 1000;
+        }
+      }
+      else if (oppose != 0){
+       var adjacent = oppose / tangeante;
+       var hypothenus = oppose / sinus;
+       if (arrondir == "unite") {
+         adjacent = Math.round(adjacent);
+         oppose = Math.round(oppose);
+         hypothenus = Math.round(hypothenus);
+       }
+       if (arrondir == "dixieme") {
+         adjacent *= 10;
+         adjacent = Math.round(adjacent);
+         adjacent /= 10;
+         oppose *= 10;
+         oppose = Math.round(oppose);
+         oppose /= 10;
+         hypothenus *= 10;
+         hypothenus = Math.round(hypothenus);
+         hypothenus /= 10;
+       }
+       if (arrondir == "centieme") {
+         adjacent *= 100;
+         adjacent = Math.round(adjacent);
+         adjacent /= 100;
+         oppose *= 100;
+         oppose = Math.round(oppose);
+         oppose /= 100;
+         hypothenus *= 100;
+         hypothenus = Math.round(hypothenus);
+         hypothenus /= 100;
+       }
+       if (arrondir == "millieme") {
+         adjacent *= 1000;
+         adjacent = Math.round(adjacent);
+         adjacent /= 1000;
+         oppose *= 1000;
+         oppose = Math.round(oppose);
+         oppose /= 1000;
+         hypothenus *= 1000;
+         hypothenus = Math.round(hypothenus);
+         hypothenus /= 1000;
+       }
+    }
+      else if (hypothenus != 0){
+        var adjacent = hypothenus * cosinus;
+        var oppose = hypothenus * sinus;
+        if (arrondir == "unite") {
+          adjacent = Math.round(adjacent);
+          oppose = Math.round(oppose);
+          hypothenus = Math.round(hypothenus);
+        }
+        if (arrondir == "dixieme") {
+          adjacent *= 10;
+          adjacent = Math.round(adjacent);
+          adjacent /= 10;
+          oppose *= 10;
+          oppose = Math.round(oppose);
+          oppose /= 10;
+          hypothenus *= 10;
+          hypothenus = Math.round(hypothenus);
+          hypothenus /= 10;
+        }
+        if (arrondir == "centieme") {
+          adjacent *= 100;
+          adjacent = Math.round(adjacent);
+          adjacent /= 100;
+          oppose *= 100;
+          oppose = Math.round(oppose);
+          oppose /= 100;
+          hypothenus *= 100;
+          hypothenus = Math.round(hypothenus);
+          hypothenus /= 100;
+        }
+        if (arrondir == "millieme") {
+          adjacent *= 1000;
+          adjacent = Math.round(adjacent);
+          adjacent /= 1000;
+          oppose *= 1000;
+          oppose = Math.round(oppose);
+          oppose /= 1000;
+          hypothenus *= 1000;
+          hypothenus = Math.round(hypothenus);
+          hypothenus /= 1000;
+        }
+      }
+      coadjacent = adjacent;
+      cooppose = oppose;
+      cohypothenus = hypothenus;
+      copysinus = arsinus;
+      copycosinus = arcosinus;
+      copytangeante = artangeante;
+      document.getElementById("copyblock").style.display = "block";
+      document.getElementById("result").innerHTML = "Voici les informations trigonométrique :<br/>-Sinus : " + arsinus + "<br/>-Cosinus : " + arcosinus + "<br/>-Tangeante : " + artangeante + "<br/>Et voici les longueurs :<br/>-Adjacent : " + adjacent + "<br/>-Opposé : " + oppose + "<br/>-Hypothénus : " + hypothenus;
+    }
+    function copy() {
+      var copyselect = document.getElementById("copyselect").value;
+      if (copyselect == "sinus") {
+        document.getElementById("copyholder").value = copysinus;
+      }
+      if (copyselect == "cosinus") {
+        document.getElementById("copyholder").value = copycosinus;
+      }
+      if (copyselect == "tangeante") {
+        document.getElementById("copyholder").value = copytangeante;
+      }
+      if (copyselect == "adjacent") {
+        document.getElementById("copyholder").value = coadjacent;
+      }
+      if (copyselect == "oppose") {
+        document.getElementById("copyholder").value = cooppose;
+      }
+      if (copyselect == "hypothenus") {
+        document.getElementById("copyholder").value = cohypothenus;
+      }
+      var copyText = document.getElementById("copyholder");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      alert("Le résultat : " + copyText.value + " a bien été copié dans le presse-papier. ");
+    }
+    function template(which){
+      document.getElementById("hometemplate").style.display = "none";
+      document.getElementById("trigotemplate").style.display = "none";
+      document.getElementById("pkc1final").style.display = "none";
+      document.getElementById(which).style.display = "block";
+    }
+      function resize() {
+        document.getElementById('hometemplate').style.top = screen.height / 6 + "px";
+        document.getElementById('hometemplate').style.left = screen.width / 3 + "px";
+        document.getElementById('hometemplate').style.display = "block";
+        document.getElementById('trigotemplate').style.top = screen.height / 6 + "px";
+        document.getElementById('trigotemplate').style.left = screen.width / 3 + "px";
+      }
+</script>
+</head>
+<body onload="resize()" style=margin-bottom:1cm">
+  <nav>
+      <ul>
+        <li class="deroulant"><a>Calculateurs</a>
+          <ul class="sous">
+            <li><button class="button sous" onclick="template('trigotemplate')">Trigonométrie</button></li>
+          </ul>
+        </li>
+        <li class="deroulant"><a>Jeux</a>
+          <ul class="sous">
+            <li><button class="button sous" onclick="template('pkc1final')" disabled>Pk-c1-Final</button></li>
+          </ul>
+        </li>
+        </ul>
+    </nav>
+  <div id="hometemplate" style="display:none;position:absolute">
+    Accueil
+  </div>
+  <div id="trigotemplate" style="display:none;position:absolute">
+  <article class="message is-warning" style="width:15cm">
+  <div class="message-header">
+    <p>Attention !</p>
+  </div>
+  <div class="message-body">
+    <p>L'angle en degrés est requis ainsi qu'au moins la valeur d'un des côtés en centimètres. </p>
+  </div>
+</article>
+  <br/>
+  <article class="message is-info" style="width:15cm">
+    <div class="message-header">
+      <p>Valeurs connues</p>
+    </div>
+    <div class="message-body">
+      <p id="enonce">Angle :</p>
+      <div class="control">
+        <input class="input is-focused is-info" type="number" id="angle" placeholder="Angle" max="180" min="0" style="width:5cm">
+      </div>
+      <br/>
+      <br/>
+      <p id="enonce">Adjacent :</p>
+      <div class="control">
+        <input class="input is-focused is-info" type="number" id="inadjacent" value="0" placeholder="Adjacent" min="0" style="width:5cm">
+      </div>
+      <br/>
+      <br/>
+      <p id="enonce">Opposé :</p>
+      <div class="control">
+        <input class="input is-focused is-info" type="number" id="inopposé" value="0" placeholder="Opposé"  min="0" style="width:5cm">
+      </div>
+      <br/>
+      <br/>
+      <p id="enonce">Hypothénus :</p>
+      <div class="control">
+        <input class="input is-focused is-info" type="number" id="inhypothenus" value="0" placeholder="Hypothénus" min="0" style="width:5cm">
+      </div>
+      <br/>
+      <p id="enonce">Arrondir les résultat :</p>
+      <div class="field">
+      <div class="control">
+        <div class="select is-info">
+          <select id="arrondir">
+            <option value="unite">à l'unité</option>
+            <option value="dixieme">au dixième près</option>
+            <option value="centieme">au centième près</option>
+            <option value="millieme">au millième près</option>
+            <option value="no">Ne pas arrondir</option>
+          </select>
+        </div>
+      </div>
+    </div>
+      <button type="submit" style="margin-top:1cm;margin-bottom:1cm" class="button is-outlined is-info is-rounded" onclick="calculate()">Calculer</button>
+    </div>
+  </article>
+  <article class="message is-success" style="width:15cm">
+    <div class="message-header">
+      <p>Résultats</p>
+    </div>
+    <div class="message-body">
+      <p id="result"></p>
+    </div>
+  </article>
+  <article class="message is-primary" id="copyblock" style="width:15cm;display:none">
+  <div class="message-header">
+    <p>Copier</p>
+  </div>
+  <div class="message-body">
+    <div class="field">
+    <div class="control">
+      <div class="select is-primary">
+        <select id="copyselect">
+          <option value="sinus">Le sinus</option>
+          <option value="cosinus">Le cosinus</option>
+          <option value="tangeante">La tangeante</option>
+          <option value="adjacent">L'adjacent</option>
+          <option value="oppose">L'opposé</option>
+          <option value="hypothenus">L'hypothénus</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  </div>
+  <button type="submit" style="margin-top:1cm;margin-bottom:1cm;margin-left:0.7cm" class="button is-outlined is-primary" onclick="copy()">Copier</button>
+  <div class="control">
+    <input type="text" id="copyholder" style="width:5cm;display:none" readonly>
+  </div>
+</article>
+</div>
+<div id="pkc1final" style="display:none">
+  <iframe is="x-frame-bypass" src="https://scratch.mit.edu/projects/310862555" allowtransparency="true" width="900" height="700" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</div>
+</body>
