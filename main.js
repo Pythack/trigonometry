@@ -237,6 +237,7 @@ function calculate() {
 
       function format() {
       if (isMobile()) {
+            alert('ok');
             document.body.style.margin-top = "20px";
             document.body.style.margin-left = "20px";
             }
