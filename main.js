@@ -235,10 +235,8 @@ function calculate() {
       return check;
       };
 
-      function format() {
-      alert('ok');
+
       if (isMobile()) {
             document.body.style.margin-top = "20px";
             document.body.style.margin-left = "20px";
-            }
       }
