@@ -236,10 +236,8 @@ function calculate() {
       };
 
       function format() {
-      if (isMobile() == false) {
-            alert('ok');
+      if (isMobile()) {
             document.body.style.margin-top = "20px";
             document.body.style.margin-left = "20px";
-            alert('terminé');
             }
       }
