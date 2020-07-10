@@ -234,9 +234,11 @@ function calculate() {
       })(navigator.userAgent||navigator.vendor||window.opera);
       return check;
       };
-      alert('ok');
+     function format() {
+      alert('launched');
       if (isMobile() == false) {
+            alert('entered');
             document.body.style.margin-top = "20px";
             document.body.style.margin-left = "20px";
-      }
-     alert('ok');
+    }
+}
