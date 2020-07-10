@@ -234,4 +234,10 @@ function calculate() {
       })(navigator.userAgent||navigator.vendor||window.opera);
       return check;
       };
+
+      if (isMobile() == false) {
+            alert('ok');
+            document.body.style.margin-top = "20px";
+            document.body.style.margin-left = "20px";
+      }
      
