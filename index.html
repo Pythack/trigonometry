@@ -1,95 +1,96 @@
 <head>
   <title>Trigonométrie</title>
   <link rel="stylesheet" href="bulma.css">
+  <meta charset="utf-8">
   <link rel="icon" type="image/png" href="icône.png" />
   <script src="main.js"></script>
-</head>
-<body style="margin-left:35%;margin-top:2cm" onload="format()">
-  <article class="message is-warning" style="width:15cm">
-  <div class="message-header">
-    <p>Attention !</p>
-  </div>
-  <div class="message-body">
-    <p>L'angle en degrés est requis ainsi qu'au moins la valeur d'un des côtés en centimètres. </p>
-  </div>
-</article>
-  <br/>
-  <article class="message is-info" style="width:15cm">
+  </head>
+  <body style="margin-left:35%;margin-top:2cm" onload="format()">
+    <article class="message is-warning" style="width:15cm">
     <div class="message-header">
-      <p>Valeurs connues</p>
+      <p>Attention !</p>
     </div>
     <div class="message-body">
-      <p id="enonce">Angle :</p>
-      <div class="control">
-        <input class="input is-focused is-info" type="number" id="angle" placeholder="Angle" max="180" min="0" style="width:5cm">
+      <p>L'angle en degrés est requis ainsi qu'au moins la valeur d'un des côtés en centimètres. </p>
+    </div>
+  </article>
+    <br/>
+    <article class="message is-info" style="width:15cm">
+      <div class="message-header">
+        <p>Valeurs connues</p>
       </div>
-      <br/>
-      <br/>
-      <p id="enonce">Adjacent :</p>
-      <div class="control">
-        <input class="input is-focused is-info" type="number" id="inadjacent" value="0" placeholder="Adjacent" min="0" style="width:5cm">
+      <div class="message-body">
+        <p id="enonce">Angle :</p>
+        <div class="control">
+          <input class="input is-focused is-info" type="number" id="angle" placeholder="Angle" max="180" min="0" style="width:5cm">
+        </div>
+        <br/>
+        <br/>
+        <p id="enonce">Adjacent :</p>
+        <div class="control">
+          <input class="input is-focused is-info" type="number" id="inadjacent" value="0" placeholder="Adjacent" min="0" style="width:5cm">
+        </div>
+        <br/>
+        <br/>
+        <p id="enonce">Opposé :</p>
+        <div class="control">
+          <input class="input is-focused is-info" type="number" id="inopposé" value="0" placeholder="Opposé"  min="0" style="width:5cm">
+        </div>
+        <br/>
+        <br/>
+        <p id="enonce">Hypothénus :</p>
+        <div class="control">
+          <input class="input is-focused is-info" type="number" id="inhypothenus" value="0" placeholder="Hypothénus" min="0" style="width:5cm">
+        </div>
+        <br/>
+        <p id="enonce">Arrondir les résultat :</p>
+        <div class="field">
+        <div class="control">
+          <div class="select is-info">
+            <select id="arrondir">
+              <option value="unite">à l'unité</option>
+              <option value="dixieme">au dixième près</option>
+              <option value="centieme">au centième près</option>
+              <option value="millieme">au millième près</option>
+              <option value="no">Ne pas arrondir</option>
+            </select>
+          </div>
+        </div>
       </div>
-      <br/>
-      <br/>
-      <p id="enonce">Opposé :</p>
-      <div class="control">
-        <input class="input is-focused is-info" type="number" id="inopposé" value="0" placeholder="Opposé"  min="0" style="width:5cm">
+        <button type="submit" style="margin-top:1cm;margin-bottom:1cm" class="button is-outlined is-info is-rounded" onclick="calculate()">Calculer</button>
       </div>
-      <br/>
-      <br/>
-      <p id="enonce">Hypothénus :</p>
-      <div class="control">
-        <input class="input is-focused is-info" type="number" id="inhypothenus" value="0" placeholder="Hypothénus" min="0" style="width:5cm">
+    </article>
+    <article class="message is-success" style="width:15cm">
+      <div class="message-header">
+        <p>Résultats</p>
       </div>
-      <br/>
-      <p id="enonce">Arrondir les résultat :</p>
+      <div class="message-body">
+        <p id="result"></p>
+      </div>
+    </article>
+    <article class="message is-primary" id="copyblock" style="width:15cm;display:none">
+    <div class="message-header">
+      <p>Copier</p>
+    </div>
+    <div class="message-body">
       <div class="field">
       <div class="control">
-        <div class="select is-info">
-          <select id="arrondir">
-            <option value="unite">à l'unité</option>
-            <option value="dixieme">au dixième près</option>
-            <option value="centieme">au centième près</option>
-            <option value="millieme">au millième près</option>
-            <option value="no">Ne pas arrondir</option>
+        <div class="select is-primary">
+          <select id="copyselect">
+            <option value="sinus">Le sinus</option>
+            <option value="cosinus">Le cosinus</option>
+            <option value="tangeante">La tangeante</option>
+            <option value="adjacent">L'adjacent</option>
+            <option value="oppose">L'opposé</option>
+            <option value="hypothenus">L'hypothénus</option>
           </select>
         </div>
       </div>
     </div>
-      <button type="submit" style="margin-top:1cm;margin-bottom:1cm" class="button is-outlined is-info is-rounded" onclick="calculate()">Calculer</button>
     </div>
-  </article>
-  <article class="message is-success" style="width:15cm">
-    <div class="message-header">
-      <p>Résultats</p>
-    </div>
-    <div class="message-body">
-      <p id="result"></p>
-    </div>
-  </article>
-  <article class="message is-primary" id="copyblock" style="width:15cm;display:none">
-  <div class="message-header">
-    <p>Copier</p>
-  </div>
-  <div class="message-body">
-    <div class="field">
+    <button type="submit" style="margin-top:1cm;margin-bottom:1cm;margin-left:0.7cm" class="button is-outlined is-primary" onclick="copy()">Copier</button>
     <div class="control">
-      <div class="select is-primary">
-        <select id="copyselect">
-          <option value="sinus">Le sinus</option>
-          <option value="cosinus">Le cosinus</option>
-          <option value="tangeante">La tangeante</option>
-          <option value="adjacent">L'adjacent</option>
-          <option value="oppose">L'opposé</option>
-          <option value="hypothenus">L'hypothénus</option>
-        </select>
-      </div>
+      <input type="text" id="copyholder" style="width:5cm;display:none" readonly>
     </div>
-  </div>
-  </div>
-  <button type="submit" style="margin-top:1cm;margin-bottom:1cm;margin-left:0.7cm" class="button is-outlined is-primary" onclick="copy()">Copier</button>
-  <div class="control">
-    <input type="text" id="copyholder" style="width:5cm;display:none" readonly>
-  </div>
-</article>
-</body>
+  </article>
+  </body>
