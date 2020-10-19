@@ -198,6 +198,7 @@ function calculate() {
       copycosinus = arcosinus;
       copytangeante = artangeante;
       document.getElementById("copyblock").style.display = "block";
+      document.getElementById("resultblock").style.display = "block";
       document.getElementById("result").innerHTML = "Voici les informations trigonométrique :<br/>-Sinus : " + arsinus + "<br/>-Cosinus : " + arcosinus + "<br/>-Tangeante : " + artangeante + "<br/>Et voici les longueurs :<br/>-Adjacent : " + adjacent + "<br/>-Opposé : " + oppose + "<br/>-Hypothénus : " + hypothenus;
     }
     function copy() {
@@ -221,9 +222,11 @@ function calculate() {
         document.getElementById("copyholder").value = cohypothenus;
       }
       var copyText = document.getElementById("copyholder");
+      document.getElementById('copyholder').style.display = "block";
       copyText.select();
-      copyText.setSelectionRange(0, 99999)
+      copyText.setSelectionRange(0, 9999999999999)
       document.execCommand("copy");
+      document.getElementById('copyholder').style.display = "none";
       alert("Le résultat : " + copyText.value + " a bien été copié dans le presse-papier. ");
     }
     function getDeviceType() {
