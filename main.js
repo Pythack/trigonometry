@@ -201,34 +201,7 @@ function calculate() {
       document.getElementById("resultblock").style.display = "block";
       document.getElementById("result").innerHTML = "Voici les informations trigonométrique :<br/>-Sinus : " + arsinus + "<br/>-Cosinus : " + arcosinus + "<br/>-Tangeante : " + artangeante + "<br/>Et voici les longueurs :<br/>-Adjacent : " + adjacent + "<br/>-Opposé : " + oppose + "<br/>-Hypothénus : " + hypothenus;
     }
-    function copy() {
-      var copyselect = document.getElementById("copyselect").value;
-      if (copyselect == "sinus") {
-        document.getElementById("copyholder").value = copysinus;
-      }
-      if (copyselect == "cosinus") {
-        document.getElementById("copyholder").value = copycosinus;
-      }
-      if (copyselect == "tangeante") {
-        document.getElementById("copyholder").value = copytangeante;
-      }
-      if (copyselect == "adjacent") {
-        document.getElementById("copyholder").value = coadjacent;
-      }
-      if (copyselect == "oppose") {
-        document.getElementById("copyholder").value = cooppose;
-      }
-      if (copyselect == "hypothenus") {
-        document.getElementById("copyholder").value = cohypothenus;
-      }
-      var copyText = document.getElementById("copyholder");
-      document.getElementById('copyholder').style.display = "block";
-      copyText.select();
-      copyText.setSelectionRange(0, 9999999999999)
-      document.execCommand("copy");
-      document.getElementById('copyholder').style.display = "none";
-      alert("Le résultat : " + copyText.value + " a bien été copié dans le presse-papier. ");
-    }
+    
     function getDeviceType() {
       const ua = navigator.userAgent;
       if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
