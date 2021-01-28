@@ -197,7 +197,6 @@ function calculate() {
       copysinus = arsinus;
       copycosinus = arcosinus;
       copytangeante = artangeante;
-      document.getElementById("copyblock").style.display = "block";
       document.getElementById("resultblock").style.display = "block";
       document.getElementById("result").innerHTML = "Voici les informations trigonométrique :<br/>-Sinus : " + arsinus + "<br/>-Cosinus : " + arcosinus + "<br/>-Tangeante : " + artangeante + "<br/>Et voici les longueurs :<br/>-Adjacent : " + adjacent + "<br/>-Opposé : " + oppose + "<br/>-Hypothénus : " + hypothenus;
     }
